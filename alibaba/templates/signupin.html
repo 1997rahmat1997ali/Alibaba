@@ -83,5 +83,11 @@
            return false;
          });
       </script>
+      <script>
+         if({{mismatch}}) {
+            alert('{{ message }}');
+            signupBtn.click();
+         }
+      </script>
    </body>
 </html>
