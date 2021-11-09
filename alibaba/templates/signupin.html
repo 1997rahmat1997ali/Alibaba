@@ -26,13 +26,13 @@
                <div class="slider-tab"></div>
             </div>
             <div class="form-inner">
-               <form action="#" class="login">
+               <form action="log_in" method='POST' class="login">
 			   {%csrf_token%}
                   <div class="field">
-                     <input type="text" placeholder="Email Address" required>
+                     <input type="text" placeholder="Email Address" name=email required>
                   </div>
                   <div class="field">
-                     <input type="password" placeholder="Password" required>
+                     <input type="password" placeholder="Password" name=pd required>
                   </div>
                   <div class="pass-link">
                      <a href="https://www.google.com/">Forgot password?</a>
@@ -82,6 +82,12 @@
            signupBtn.click();
            return false;
          });
+      </script>
+      <script>
+         if({{mismatch}}) {
+            alert('{{ message }}');
+            signupBtn.click();
+         }
       </script>
    </body>
 </html>
