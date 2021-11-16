@@ -7,4 +7,6 @@ urlpatterns=[
             path('',views.signupin),
             path('sig',views.sig),
             path('log_in',views.log_in),
+            path('forgot_password',views.fopd),
+            path('fpd',views.fpd),
             ]
